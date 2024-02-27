@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- EditText fields for input -->
+    <EditText
+        android:id="@+id/editTextVolumeCarguio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="capacidad_en_volumen_equipo_carguio_m3"
+        android:inputType="numberDecimal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:autofillHints="volume"/>
+
+    <EditText
+        android:id="@+id/editTextCapacidadCarguio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextVolumeCarguio"
+        android:layout_marginTop="16dp"
+        android:hint="capacidad_en_peso_equipo_carguio"
+        android:inputType="numberDecimal"
+        android:layout_centerHorizontal="true"
+        android:autofillHints="Loading"/>
+
+    <EditText
+        android:id="@+id/editTextCapacidadAcarreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextCapacidadCarguio"
+        android:layout_marginTop="16dp"
+        android:hint="capacidad_en_peso_equipo_acarreo"
+        android:inputType="numberDecimal"
+        android:layout_centerHorizontal="true"
+        android:autofillHints="Hauling" />
+
+    <EditText
+        android:id="@+id/editTextDensidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextCapacidadAcarreo"
+        android:layout_marginTop="16dp"
+        android:hint="densidad_inicial_poligono_creado_tn/m3"
+        android:inputType="numberDecimal"
+        android:layout_centerHorizontal="true"
+        android:autofillHints="StabilizedLoad" />
+
+    <EditText
+        android:id="@+id/editTextVolumenAcarreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextDensidad"
+        android:layout_marginTop="16dp"
+        android:hint="capacidad_en_volumen_equipo_acarreo_m3"
+        android:inputType="numberDecimal"
+        android:layout_centerHorizontal="true"
+        android:autofillHints="Density" />
+
+    <!-- Button to trigger prediction -->
+    <Button
+        android:id="@+id/buttonPredict"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Predict"
+        android:layout_below="@id/editTextVolumenAcarreo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- TextView to display prediction result -->
+    <TextView
+        android:id="@+id/textViewPrediction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prediction:"
+        android:layout_below="@id/buttonPredict"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>
