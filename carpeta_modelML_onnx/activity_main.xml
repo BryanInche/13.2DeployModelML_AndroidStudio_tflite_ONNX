@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<EditText
+    android:id="@+id/input_tiempo_carga"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="Tiempo_carga"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintWidth_percent="0.8"/>
+
+<EditText
+    android:id="@+id/input_capacidad_volumen"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="Capacidad_en_volumen_carguio(m3)"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/input_tiempo_carga"
+    app:layout_constraintWidth_percent="0.8"/>
+
+<EditText
+    android:id="@+id/input_densidad"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="Densidad_(tn/m3)"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/input_capacidad_volumen"
+    app:layout_constraintWidth_percent="0.8"/>
+
+<EditText
+    android:id="@+id/input_elevacion"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="Elevación_poligono(m)"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/input_densidad"
+    app:layout_constraintWidth_percent="0.8"/>
+
+<EditText
+    android:id="@+id/input_tonelaje_inicial"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="Tonelaje_inicial_poligono"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/input_elevacion"
+    app:layout_constraintWidth_percent="0.8"/>
+
+<EditText
+    android:id="@+id/input_cantidad_equipos"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="Cantidad_de_equipos_espera_al_termino_carga"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/input_tonelaje_inicial"
+    app:layout_constraintWidth_percent="0.8"/>
+
+<Button
+    android:id="@+id/btn_predecir"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Predecir"
+    app:layout_constraintTop_toBottomOf="@id/input_cantidad_equipos"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
+
+<TextView
+    android:id="@+id/text_resultado"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Resultado"
+    app:layout_constraintTop_toBottomOf="@id/btn_predecir"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
