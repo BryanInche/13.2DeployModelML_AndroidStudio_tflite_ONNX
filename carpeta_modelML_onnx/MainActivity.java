@@ -138,4 +138,5 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 
-//Math.round(
+//Math.round( entero hacia arriba
+//Math.floor( entero hacia abajo
